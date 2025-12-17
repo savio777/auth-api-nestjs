@@ -8,15 +8,15 @@ export class AuthController {
 
   // POST auth/login
   @Post('login')
-  async login(@Body() body: LoginDto) {
-    const response = await this.authService.login(body);
+  login(@Body() body: LoginDto) {
+    const response = this.authService.login(body);
     return response;
   }
 
-  // POST auth/
+  // POST auth/register
   @Post('register')
-  async register(@Body() body: RegisterDto) {
-    const response = await this.authService.register(body);
+  register(@Body() body: RegisterDto) {
+    const response = this.authService.register(body);
     return response;
   }
 }
